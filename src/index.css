@@ -499,6 +499,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: fit-content;
 }
 
+.w-\[300px\] {
+  width: 300px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -573,8 +577,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(92 151 244 / var(--tw-bg-opacity));
 }
 
+.bg-Background-1 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 24 27 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 12px;
+}
+
+.p-1 {
+  padding: 8px;
 }
 
 .px-\[80px\] {
@@ -602,12 +615,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 8px;
 }
 
+.px-4 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 .pt-3 {
   padding-top: 16px;
 }
 
 .pb-7 {
   padding-bottom: 64px;
+}
+
+.pt-4 {
+  padding-top: 24px;
 }
 
 .text-Sub1 {
@@ -620,6 +642,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-Sub3 {
   font-size: 18px;
+}
+
+.text-Sub2 {
+  font-size: 20px;
 }
 
 .text-OpacityWhite-1 {
