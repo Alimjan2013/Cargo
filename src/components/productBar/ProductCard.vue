@@ -5,7 +5,7 @@
       alt=""
       class="w-fit"
     />
-    <Button class="w-full" />
+    <Button class="w-full bg-Theme-blue" />
     <div class="flex items-center">
       <p class="text-Body3 flex-1 text-OpacityWhite-1">有一天变得有钱</p>
       <p class="text-Sub3 text-OpacityWhite-2">限时免费</p>
