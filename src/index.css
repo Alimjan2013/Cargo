@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -466,4 +466,58 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.bg-OpacityWhite-3 {
+  background-color: rgba(255, 255, 255, 0.56);
+}
+
+.bg-Background-3 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(40 42 45 / var(--tw-bg-opacity));
+}
+
+.p-2 {
+  padding: 12px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-Display1 {
+  font-size: 3.2rem;
+}
+
+.text-OpacityWhite-3 {
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.outline {
+  outline-style: solid;
 }
