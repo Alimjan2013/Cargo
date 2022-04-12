@@ -13,15 +13,15 @@ module.exports = {
       8: "96px",
     },
     fontSize: {
-      Display1: "3.2rem",
-      Display2: "2.75rem",
-      Display3: "2.25rem",
-      Body1: "2rem",
-      Body2: "1.75rem",
-      Body3: "1.5rem",
-      Sub1: "1.4rem",
-      Sub2: "1.25rem",
-      Sub3: "1.125rem",
+      Display1: "56px",
+      Display2: "44px",
+      Display3: "36px",
+      Body1: "32px",
+      Body2: "28px",
+      Body3: "25px",
+      Sub1: "22px",
+      Sub2: "20px",
+      Sub3: "18px",
     },
     screens: {
       Standard: "690px",
@@ -56,6 +56,9 @@ module.exports = {
       Line: {
         1: "rgba(255, 255, 255, 0.46)",
         2: "rgba(255, 255, 255, 0.24)",
+      },
+      Theme: {
+        blue: "#5c97F4",
       },
       // ...
     },

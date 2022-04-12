@@ -477,6 +477,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -485,16 +489,88 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
+.w-\[120px\] {
+  width: 120px;
+}
+
+.w-\[240px\] {
+  width: 240px;
+}
+
+.w-\[360px\] {
+  width: 360px;
+}
+
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.flex-none {
+  flex: none;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
   flex-direction: column;
 }
 
-.bg-OpacityWhite-3 {
-  background-color: rgba(255, 255, 255, 0.56);
+.items-center {
+  align-items: center;
+}
+
+.gap-5 {
+  gap: 32px;
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(24px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(24px * var(--tw-space-y-reverse));
+}
+
+.space-y-7 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(64px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(64px * var(--tw-space-y-reverse));
+}
+
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(32px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(32px * var(--tw-space-y-reverse));
+}
+
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(12px * var(--tw-space-x-reverse));
+  margin-left: calc(12px * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(24px * var(--tw-space-x-reverse));
+  margin-left: calc(24px * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
 }
 
 .bg-Background-3 {
@@ -502,22 +578,58 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(40 42 45 / var(--tw-bg-opacity));
 }
 
+.bg-Theme-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(92 151 244 / var(--tw-bg-opacity));
+}
+
+.bg-Background-2 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 33 36 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 12px;
 }
 
-.text-center {
-  text-align: center;
+.p-\[120\] {
+  padding: 120;
 }
 
-.text-Display1 {
-  font-size: 3.2rem;
+.p-\[120px\] {
+  padding: 120px;
 }
 
-.text-OpacityWhite-3 {
-  color: rgba(255, 255, 255, 0.56);
+.px-\[120px\] {
+  padding-left: 120px;
+  padding-right: 120px;
 }
 
-.outline {
-  outline-style: solid;
+.pb-7 {
+  padding-bottom: 64px;
+}
+
+.text-Sub1 {
+  font-size: 22px;
+}
+
+.text-Body3 {
+  font-size: 25px;
+}
+
+.text-Body1 {
+  font-size: 32px;
+}
+
+.text-Sub3 {
+  font-size: 18px;
+}
+
+.text-OpacityWhite-1 {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-OpacityWhite-2 {
+  color: rgba(255, 255, 255, 0.72);
 }
