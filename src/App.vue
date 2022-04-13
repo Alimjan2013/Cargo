@@ -17,7 +17,9 @@ export default {
 </script>
 
 <template>
-  <div class="h-screen flex flex-col bg-Background-0">
+  jjklfg
+  <router-view />
+  <!-- <div class="h-screen flex flex-col bg-Background-0">
     <div class="flex flex-1 px-[80px] space-x-2 overflow-auto">
       <div>
         <MenuBar />
@@ -26,7 +28,7 @@ export default {
     </div>
 
     <AppBar />
-  </div>
+  </div> -->
 </template>
 
 <style>
