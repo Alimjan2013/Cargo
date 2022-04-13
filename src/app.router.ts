@@ -7,7 +7,11 @@ import Store from "./store/Store.vue";
  * 定义路由
  */
 const routes: Array<RouteRecordRaw> = [
-  { path: "/ooo", component: ProductDetails },
+  {
+    path: "/product/:productID/:secondCatalogue",
+    component: ProductDetails,
+    props: true,
+  },
   { path: "/", component: Store },
   { path: "/app", component: AppBar },
 ];

@@ -1,7 +1,7 @@
 <template>
   <div class="space-y-4 w-[300px] flex-none">
     <img v-bind:src="productCover" alt="" class="w-fit" />
-    <router-link class="block" to="/ooo"
+    <router-link class="block" v-bind:to="productURL"
       ><Button class="w-full bg-Theme-blue"
     /></router-link>
 
@@ -18,8 +18,17 @@
 import Button from "../../Button.vue";
 
 export default {
+  data() {
+    return {
+      productURL: "",
+    };
+  },
   components: {
     Button,
+  },
+  created() {
+    console.log(this.product);
+    this.productURL = `/product/${this.productobj._id}/${this.productobj.catalogue.second}`;
   },
   props: {
     productName: {
