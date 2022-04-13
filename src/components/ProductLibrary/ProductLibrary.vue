@@ -13,7 +13,7 @@ import ProductBar from "./productBar/ProductBar.vue";
 export default {
   methods: {
     findCatalogue() {
-      fetch("https://qcuud7.api.cloudendpoint.cn/getCatalogue", {
+      fetch("https://qcucka.api.cloudendpoint.cn/getCatalogue", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // body: JSON.stringify({ user_id: user_id }),

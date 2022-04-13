@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     findProduct() {
-      fetch("https://qcuud7.api.cloudendpoint.cn/getProduct", {
+      fetch("https://qcucka.api.cloudendpoint.cn/getProduct", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ catalogue: this.barName }),
