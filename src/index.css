@@ -646,3 +646,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-OpacityWhite-2 {
   color: rgba(255, 255, 255, 0.72);
 }
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
