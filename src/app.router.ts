@@ -1,18 +1,15 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import ProductDetails from "./productDetails/ProductDetails.vue";
 import AppBar from "./components/AppBar.vue";
-import list from "./components/ProductLibrary/ProductLibrary.vue";
+import Store from "./store/Store.vue";
 
 /**
  * 定义路由
  */
 const routes: Array<RouteRecordRaw> = [
   { path: "/ooo", component: ProductDetails },
+  { path: "/", component: Store },
   { path: "/app", component: AppBar },
-  {
-    path: "/list",
-    component: () => import("./productDetails/ProductDetails.vue"),
-  },
 ];
 
 /**

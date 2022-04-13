@@ -1,7 +1,10 @@
 <template>
   <div class="space-y-4 w-[300px] flex-none">
     <img v-bind:src="productCover" alt="" class="w-fit" />
-    <Button class="w-full bg-Theme-blue" />
+    <router-link class="block" to="/ooo"
+      ><Button class="w-full bg-Theme-blue"
+    /></router-link>
+
     <div class="flex items-center">
       <p class="text-Body3 flex-1 text-OpacityWhite-1">{{ productName }}</p>
       <p class="text-Sub3 text-OpacityWhite-2">
