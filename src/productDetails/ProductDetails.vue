@@ -5,20 +5,21 @@
       class="flex-1 grid grid-cols-1 gap-1 Wide:grid-cols-8 py-4 Wide:px-8 px-4 Standard:px-6 space-x-2 bg-Background-2"
     >
       <div class="Wide:col-span-7">
-        <div class="flex space-x-4 overflow-x-auto w-full">
+        <div class="flex space-x-4 overflow-x-auto snap-x w-full">
           <div
-            class="object-cover"
+            class="flex-none snap-center"
             v-for="img in product.detailsImages"
             :key="img"
           >
             <img
-              class="object-cover"
+              class="object-cover h-[550px]"
               v-if="img.type === type.img"
               v-bind:src="img.url"
               alt=""
             />
             <video
-              class="object-cover"
+              class="object-cover h-[550px]"
+              autoplay
               v-if="img.type === type.video"
               :src="img.url"
             ></video>
@@ -40,6 +41,7 @@
 </template>
 <script>
 import NavigationBar from "./NavigationBar.vue";
+import Huandengpian from "./Huandengpian.vue";
 export default {
   data() {
     return {
@@ -73,6 +75,7 @@ export default {
   },
   components: {
     NavigationBar,
+    Huandengpian,
   },
 };
 </script>
