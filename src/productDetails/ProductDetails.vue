@@ -1,20 +1,53 @@
 <template>
-  <div class="text-OpacityWhite-1">
-    <p>{{ product.name }}</p>
-    <div>{{ product.introduction }}</div>
+  <div class="flex flex-1 flex-col">
+    <NavigationBar :title="product.name" />
+    <div
+      class="flex-1 grid grid-cols-1 gap-1 Wide:grid-cols-8 py-4 Wide:px-8 px-4 Standard:px-6 space-x-2 bg-Background-2"
+    >
+      <div class="Wide:col-span-7">
+        <div class="flex space-x-4 overflow-x-auto w-full">
+          <div
+            class="object-cover"
+            v-for="img in product.detailsImages"
+            :key="img"
+          >
+            <img
+              class="object-cover"
+              v-if="img.type === type.img"
+              v-bind:src="img.url"
+              alt=""
+            />
+            <video
+              class="object-cover"
+              v-if="img.type === type.video"
+              :src="img.url"
+            ></video>
+          </div>
+        </div>
+
+        <div class="text-OpacityWhite-1">{{ product.introduction }}</div>
+      </div>
+      <div class="text-OpacityWhite-1 Wide:col-span-1">
+        <div>相关推荐</div>
+        <div class="grid grid-cols-3 gap-1 Wide:grid-cols-1">
+          <div>123</div>
+          <div>123</div>
+          <div>123</div>
+        </div>
+      </div>
+    </div>
   </div>
-  <img
-    v-for="img in product.detailsImages"
-    :key="img"
-    v-bind:src="img"
-    alt=""
-  />
 </template>
 <script>
+import NavigationBar from "./NavigationBar.vue";
 export default {
   data() {
     return {
       product: {},
+      type: {
+        img: "img",
+        video: "video",
+      },
       productID: "",
       catalogue: "",
     };
@@ -37,6 +70,9 @@ export default {
     this.getProduct(1, this.catalogue);
     console.log(this.$route.params.productID);
     console.log(this.$route.params.secondCatalogue);
+  },
+  components: {
+    NavigationBar,
   },
 };
 </script>
