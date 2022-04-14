@@ -3,7 +3,12 @@
     <p>{{ product.name }}</p>
     <div>{{ product.introduction }}</div>
   </div>
-  <img v-bind:src="product.detailsImages[0]" alt="" />
+  <img
+    v-for="img in product.detailsImages"
+    :key="img"
+    v-bind:src="img"
+    alt=""
+  />
 </template>
 <script>
 export default {
@@ -14,6 +19,7 @@ export default {
       catalogue: "",
     };
   },
+
   methods: {
     getProduct(productID, catalogue) {
       const productList = this.$store.state.productList.filter(

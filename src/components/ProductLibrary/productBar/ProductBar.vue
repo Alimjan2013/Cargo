@@ -39,13 +39,25 @@ export default {
         .then((res) => res.json())
         .then((json) => {
           console.log(json.result);
+          const productList = {
+            catalogue: this.barName,
+            product: json.result,
+          };
+          this.$store.commit("setProductList", productList);
           this.productList = json.result;
         });
     },
   },
   created() {
     console.log(this.barName);
-    this.findProduct();
+    const index = this.$store.state.productList.findIndex(
+      (item) => item.catalogue === this.barName
+    );
+    if (index === -1) {
+      this.findProduct();
+    } else {
+      this.productList = this.$store.state.productList[index].product;
+    }
   },
   components: {
     ProductCard,
