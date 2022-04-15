@@ -31,20 +31,23 @@ export default {
   },
   methods: {
     findProduct() {
-      fetch("https://qcucka.api.cloudendpoint.cn/getProduct", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ catalogue: this.barName }),
-      })
+      fetch(
+        "https://cargo1.azurewebsites.net/api/HttpTrigger2?code=hUx5Hc9jgkXiUWGOcF56yBY7nQaWOPiWkeaEx2WapgLn85Rq3UsKKg==",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ catalogue: this.barName }),
+        }
+      )
         .then((res) => res.json())
         .then((json) => {
-          console.log(json.result);
+          console.log(json);
           const productList = {
             catalogue: this.barName,
-            product: json.result,
+            product: json,
           };
           this.$store.commit("setProductList", productList);
-          this.productList = json.result;
+          this.productList = json;
         });
     },
   },
