@@ -41,7 +41,6 @@
 </template>
 <script>
 import NavigationBar from "./NavigationBar.vue";
-import Huandengpian from "./Huandengpian.vue";
 export default {
   data() {
     return {
@@ -75,7 +74,6 @@ export default {
   },
   components: {
     NavigationBar,
-    Huandengpian,
   },
 };
 </script>
