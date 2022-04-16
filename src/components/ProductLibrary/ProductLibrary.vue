@@ -13,15 +13,18 @@ import ProductBar from "./productBar/ProductBar.vue";
 export default {
   methods: {
     findCatalogue() {
-      fetch("https://qcucka.api.cloudendpoint.cn/getCatalogue", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        // body: JSON.stringify({ user_id: user_id }),
-      })
+      fetch(
+        "https://cargo1.azurewebsites.net/api/GetCatalogue?code=L09Grf3RtTiYr00XDFjSATItDvUMc1YwxM6yJrGZ3I4nLHYiEK8tng==",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          // body: JSON.stringify({ user_id: user_id }),
+        }
+      )
         .then((res) => res.json())
         .then((json) => {
-          console.log(json.result);
-          this.barList = json.result;
+          console.log(json);
+          this.barList = json;
         });
     },
   },
