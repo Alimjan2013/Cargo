@@ -29,14 +29,19 @@ export default {
     },
   },
   data() {
-    return {
-      name: "helo",
-      barList: [],
-    };
+    return { barList: [] };
   },
   created() {
-    console.log(this.name);
-    this.findCatalogue();
+    if (!this.$store.state.productList[0]) {
+      this.findCatalogue();
+    } else {
+      this.$store.state.productList.map((catalogue, index) =>
+        this.barList.push({
+          _id: index,
+          name: catalogue.catalogue,
+        })
+      );
+    }
   },
   components: {
     ProductBar,
