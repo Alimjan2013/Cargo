@@ -32,7 +32,7 @@ export default {
   methods: {
     findProduct() {
       fetch(
-        "https://cargo1.azurewebsites.net/api/HttpTrigger2?code=hUx5Hc9jgkXiUWGOcF56yBY7nQaWOPiWkeaEx2WapgLn85Rq3UsKKg==",
+        "https://d40d2143-72af-4a3b-b428-2874934cbc4f.bspapp.com/findItems?catalogue=jh",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -44,10 +44,10 @@ export default {
           console.log(json);
           const productList = {
             catalogue: this.barName,
-            product: json,
+            product: json.data,
           };
           this.$store.commit("setProductList", productList);
-          this.productList = json;
+          this.productList = json.data;
         });
     },
   },
