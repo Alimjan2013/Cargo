@@ -49,7 +49,7 @@ export default {
     <div>
       <MenuBar v-bind:menuItem="menuItem" />
     </div>
-    <router-view :key="key"></router-view>
+    <router-view></router-view>
   </div>
 </template>
 

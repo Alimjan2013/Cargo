@@ -9,17 +9,13 @@ export default {
     console.log("我在这里");
     // this.findCatalogue();
   },
-  computed: {
-    key() {
-      return 1;
-    },
-  },
+  computed: {},
 };
 </script>
 
 <template>
   <div class="h-screen flex flex-col bg-Background-0">
-    <router-view :key="key" />
+    <router-view />
 
     <AppBar />
   </div>

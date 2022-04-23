@@ -18,13 +18,14 @@ export default {
   },
   methods: {
     handleClick(name) {
-      if (name === "车主生活") {
-        this.$router.replace("/store/index");
-      } else if (name === "个人中心") {
-        this.$router.replace("/store/aboutme");
-      } else {
-        this.$router.replace(`/store/productLibrary/${name}`);
-      }
+      console.log("menu 被点了");
+      // if (name === "车主生活") {
+      //   this.$router.replace("/store/index");
+      // } else if (name === "个人中心") {
+      //   this.$router.replace("/store/aboutme");
+      // } else {
+      //   this.$router.replace(`/store/productLibrary/${name}`);
+      // }
     },
   },
   props: {
