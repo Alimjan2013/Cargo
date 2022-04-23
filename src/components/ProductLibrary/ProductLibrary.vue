@@ -12,36 +12,25 @@
 import ProductBar from "./productBar/ProductBar.vue";
 export default {
   methods: {
-    findCatalogue() {
-      fetch(
-        "https://cargo1.azurewebsites.net/api/GetCatalogue?code=L09Grf3RtTiYr00XDFjSATItDvUMc1YwxM6yJrGZ3I4nLHYiEK8tng==",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          // body: JSON.stringify({ user_id: user_id }),
-        }
-      )
-        .then((res) => res.json())
-        .then((json) => {
-          console.log(json);
-          this.barList = json;
-        });
+    findCatalogue(catalogueName) {
+      const catalogue = this.$store.state.menuBarList.filter(
+        (catalogue) => catalogue.name === catalogueName
+      )[0];
+      const barList = [];
+      catalogue.child.map((item) =>
+        barList.push({
+          _id: item.id,
+          name: item.name,
+        })
+      );
+      this.barList = barList;
     },
   },
   data() {
     return { barList: [] };
   },
   created() {
-    if (!this.$store.state.productList[0]) {
-      this.findCatalogue();
-    } else {
-      this.$store.state.productList.map((catalogue, index) =>
-        this.barList.push({
-          _id: index,
-          name: catalogue.catalogue,
-        })
-      );
-    }
+    this.findCatalogue("智能场景");
   },
   components: {
     ProductBar,

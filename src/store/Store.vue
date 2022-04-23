@@ -14,7 +14,11 @@ export default {
   },
   created() {
     console.log("我在这里");
-    this.findCatalogue();
+    if (this.$store.state.menuBarList.length === 2) {
+      this.findCatalogue();
+    } else {
+      this.menuItem = this.$store.state.menuBarList;
+    }
   },
   methods: {
     findCatalogue() {
