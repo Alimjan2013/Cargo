@@ -12,7 +12,7 @@ export default {
   },
   computed: {
     key() {
-      return this.$router.meta.activeMenuName;
+      return this.$route.meta.activeMenuName;
     },
   },
   created() {
@@ -49,7 +49,7 @@ export default {
     <div>
       <MenuBar v-bind:menuItem="menuItem" />
     </div>
-    <router-view></router-view>
+    <router-view :key="key"></router-view>
   </div>
 </template>
 

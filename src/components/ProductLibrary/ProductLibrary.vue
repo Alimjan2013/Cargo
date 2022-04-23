@@ -17,21 +17,33 @@ export default {
         (catalogue) => catalogue.name === catalogueName
       )[0];
       const barList = [];
-      catalogue.child.map((item) =>
+      catalogue.child.map((item) => {
+        console.log("我在被push");
         barList.push({
           _id: item.id,
           name: item.name,
-        })
-      );
+        });
+      });
       this.barList = barList;
     },
   },
   data() {
     return { barList: [] };
   },
+  computed: {
+    routerName() {
+      return this.$route.params.name;
+    },
+  },
   created() {
     console.log(this.$route.params.name);
     this.findCatalogue(this.$route.params.name);
+  },
+  watch: {
+    $route(to, from) {
+      //todo , 这里会加载三次
+      this.findCatalogue(this.$route.params.name);
+    },
   },
   components: {
     ProductBar,
