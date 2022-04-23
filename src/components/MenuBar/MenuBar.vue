@@ -4,6 +4,7 @@
       v-for="name of MenuItemList"
       :key="name._id"
       v-bind:menuName="name.name"
+      @click="handleClick(name.name)"
     />
   </div>
 </template>
@@ -16,13 +17,14 @@ export default {
     };
   },
   methods: {
-    handleClick(id) {
-      console.log(id);
-      const activeindex = this.MenuItemList.findIndex(
-        (item) => item.active === true
-      );
-      this.MenuItemList[activeindex].active = false;
-      this.MenuItemList[id - 1].active = true;
+    handleClick(name) {
+      if (name === "车主生活") {
+        this.$router.replace("/store/index");
+      } else if (name === "个人中心") {
+        this.$router.replace("/store/aboutme");
+      } else {
+        this.$router.replace(`/store/productLibrary/${name}`);
+      }
     },
   },
   props: {

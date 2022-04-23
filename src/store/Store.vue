@@ -1,6 +1,5 @@
 <script>
 import MenuBar from "../components/MenuBar/MenuBar.vue";
-import ProductLibrary from "../components/ProductLibrary/ProductLibrary.vue";
 
 export default {
   data() {
@@ -10,7 +9,11 @@ export default {
   },
   components: {
     MenuBar,
-    ProductLibrary,
+  },
+  computed: {
+    key() {
+      return this.$router.meta.activeMenuName;
+    },
   },
   created() {
     console.log("我在这里");
@@ -46,7 +49,7 @@ export default {
     <div>
       <MenuBar v-bind:menuItem="menuItem" />
     </div>
-    <ProductLibrary />
+    <router-view :key="key"></router-view>
   </div>
 </template>
 

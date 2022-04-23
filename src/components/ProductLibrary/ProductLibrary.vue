@@ -30,7 +30,8 @@ export default {
     return { barList: [] };
   },
   created() {
-    this.findCatalogue("智能场景");
+    console.log(this.$route.params.name);
+    this.findCatalogue(this.$route.params.name);
   },
   components: {
     ProductBar,

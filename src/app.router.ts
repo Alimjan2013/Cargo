@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import ProductDetails from "./productDetails/ProductDetails.vue";
-import AppBar from "./components/AppBar.vue";
-import Store from "./store/Store.vue";
-
+import storeRouters from "./store/store.routes";
+import Store from "./store/store.vue";
 /**
  * 定义路由
  */
@@ -10,10 +9,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/product/:productID/:secondCatalogue",
     component: ProductDetails,
-    props: true,
   },
-  { path: "/", component: Store },
-  { path: "/app", component: AppBar },
+  {
+    path: "/store",
+    component: Store,
+  },
+  ...storeRouters,
 ];
 
 /**
