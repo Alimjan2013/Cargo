@@ -1,6 +1,5 @@
 <script>
 import AppBar from "./components/AppBar.vue";
-
 export default {
   components: {
     AppBar,
@@ -16,7 +15,6 @@ export default {
 <template>
   <div class="h-screen flex flex-col bg-Background-0">
     <router-view />
-
     <AppBar />
   </div>
 </template>
