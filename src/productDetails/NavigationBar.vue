@@ -31,7 +31,6 @@
 </template>
 
 <script>
-import { Left } from "@icon-park/vue-next";
 export default {
   props: {
     title: {
@@ -39,9 +38,7 @@ export default {
       default: "加载中",
     },
   },
-  components: {
-    Left,
-  },
+  components: {},
   methods: {
     back() {
       this.$router.go(-1);

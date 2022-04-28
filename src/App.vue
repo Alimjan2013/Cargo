@@ -14,7 +14,7 @@ export default {
 
 <template>
   <div class="h-screen flex flex-col bg-Background-0">
-    <router-view />
+    <router-view :key="this.$route.params.productID" />
     <AppBar />
   </div>
 </template>
