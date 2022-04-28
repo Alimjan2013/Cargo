@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-1 space-y-7 px-4 pt-4 pb-7 overflow-auto bg-Background-1">
+  <div class="flex-1 space-y-7 px-4 pt-4 pb-7 bg-Background-1">
     <ProductBar
       v-for="name of barList"
       :key="name._id"
@@ -40,10 +40,10 @@ export default {
     this.findCatalogue(this.$route.params.name);
   },
   watch: {
-    $route(to, from) {
-      //todo , 这里会加载三次
-      this.findCatalogue(this.$route.params.name);
-    },
+    // $route(to, from) {
+    //   //todo , 这里会加载三次
+    //   this.findCatalogue(this.$route.params.name);
+    // },
   },
   components: {
     ProductBar,

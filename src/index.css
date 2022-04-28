@@ -606,12 +606,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: calc(24px * var(--tw-space-y-reverse));
 }
 
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(12px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(12px * var(--tw-space-y-reverse));
+}
+
 .overflow-auto {
   overflow: auto;
 }
 
 .overflow-x-auto {
   overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .bg-Background-0 {
@@ -687,6 +697,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 8px;
 }
 
+.p-3 {
+  padding: 16px;
+}
+
 .py-4 {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -715,6 +729,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-1 {
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.px-3 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.px-\[80\] {
+  padding-left: 80;
+  padding-right: 80;
 }
 
 .pt-4 {
@@ -809,6 +833,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   .Wide\:px-8 {
     padding-left: 96px;
     padding-right: 96px;
+  }
+
+  .Wide\:px-\[80px\] {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .Wide\:px-\[80\] {
+    padding-left: 80;
+    padding-right: 80;
+  }
+
+  .Wide\:text-Body3 {
+    font-size: 25px;
   }
 }
 

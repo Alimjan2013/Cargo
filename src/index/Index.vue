@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-1 bg-Background-1">
+  <div class="flex-1 bg-Background-1 p-3">
     <Swiper />
   </div>
 </template>

@@ -17,7 +17,7 @@ export default {
   },
   created() {
     console.log("我在这里");
-    if (this.$store.state.menuBarList.length === 2) {
+    if (this.$store.state.menuBarList.length === 1) {
       this.findCatalogue();
     } else {
       this.menuItem = this.$store.state.menuBarList;
@@ -45,12 +45,23 @@ export default {
 </script>
 
 <template>
-  <div class="flex flex-1 px-[80px] space-x-2 overflow-auto">
-    <div>
-      <MenuBar v-bind:menuItem="menuItem" />
+  <div class="flex flex-col flex-1 overflow-y-auto">
+    <MenuBar v-bind:menuItem="menuItem" />
+    <div class="routerView overflow-auto">
+      <router-view :key="key"></router-view>
     </div>
-    <router-view :key="key"></router-view>
   </div>
 </template>
 
-<style></style>
+<style>
+.routerView {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width: 930px) {
+  .routerView {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+</style>
