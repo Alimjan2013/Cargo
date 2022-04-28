@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-1 space-y-7 px-4 pt-4 pb-7 bg-Background-1">
+  <div class="flex-1 Wide:space-y-6 space-y-4 px-4 pt-4 pb-7 bg-Background-1">
     <ProductBar
       v-for="name of barList"
       :key="name._id"

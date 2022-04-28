@@ -560,6 +560,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -574,6 +582,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-1 {
   gap: 8px;
+}
+
+.gap-2 {
+  gap: 12px;
+}
+
+.gap-3 {
+  gap: 16px;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -616,6 +632,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-x-reverse: 0;
   margin-right: calc(48px * var(--tw-space-x-reverse));
   margin-left: calc(48px * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(16px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(16px * var(--tw-space-y-reverse));
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(8px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(8px * var(--tw-space-y-reverse));
+}
+
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(8px * var(--tw-space-x-reverse));
+  margin-left: calc(8px * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-auto {
@@ -793,6 +827,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 18px;
 }
 
+.text-\[12px\] {
+  font-size: 12px;
+}
+
 .text-OpacityWhite-1 {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -861,6 +899,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: none;
   }
 
+  .Standard\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .Standard\:px-6 {
     padding-left: 48px;
     padding-right: 48px;
@@ -896,10 +938,50 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
+  .Wide\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .Wide\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .Wide\:gap-5 {
+    gap: 32px;
+  }
+
   .Wide\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(48px * var(--tw-space-x-reverse));
     margin-left: calc(48px * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .Wide\:space-y-5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(32px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(32px * var(--tw-space-y-reverse));
+  }
+
+  .Wide\:space-y-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(16px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(16px * var(--tw-space-y-reverse));
+  }
+
+  .Wide\:space-y-7 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(64px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(64px * var(--tw-space-y-reverse));
+  }
+
+  .Wide\:space-y-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(48px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(48px * var(--tw-space-y-reverse));
+  }
+
+  .Wide\:p-1 {
+    padding: 8px;
   }
 
   .Wide\:px-8 {
@@ -924,10 +1006,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   .Wide\:text-Sub1 {
     font-size: 22px;
   }
+
+  .Wide\:text-\[12px\] {
+    font-size: 12px;
+  }
+
+  .Wide\:text-Sub3 {
+    font-size: 18px;
+  }
+
+  .Wide\:text-Sub2 {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1280px) {
   .ExtraWide\:hidden {
     display: none;
+  }
+
+  .ExtraWide\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .ExtraWide\:gap-5 {
+    gap: 32px;
   }
 }

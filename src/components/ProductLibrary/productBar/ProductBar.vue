@@ -1,12 +1,16 @@
 <template>
-  <div class="flex-1 flex flex-col space-y-5">
-    <div class="text-Sub1 text-OpacityWhite-2">{{ barName }}</div>
-    <div class="flex space-x-4 overflow-x-auto">
+  <div class="flex-1 flex flex-col Wide:space-y-3 space-y-1">
+    <div class="Wide:text-Sub1 text-Sub3 text-OpacityWhite-2">
+      {{ barName }}
+    </div>
+    <div
+      class="grid ExtraWide:gap-5 gap-3 ExtraWide:grid-cols-4 Standard:grid-cols-3 grid-cols-2"
+    >
       <ProductCard
         v-for="product in productList"
         :key="product._id"
         v-bind:productName="product.name"
-        v-bind:productPrice="product.prise"
+        v-bind:productPrice="product.price"
         v-bind:productCover="product.cover"
         v-bind:productobj="product"
       />

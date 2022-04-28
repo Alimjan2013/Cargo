@@ -1,5 +1,7 @@
 <template>
-  <button class="text-Sub2 p-1 text-OpacityWhite-1">{{ name }}</button>
+  <button class="Wide:text-Sub2 text-Sub3 Wide:p-1 p-0 text-OpacityWhite-1">
+    {{ name }}
+  </button>
 </template>
 
 <script>

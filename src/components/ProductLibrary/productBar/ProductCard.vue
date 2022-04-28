@@ -1,13 +1,15 @@
 <template>
-  <div class="space-y-4 w-[300px] flex-none">
+  <div class="Wide:space-y-3 space-y-1">
     <img v-bind:src="productCover" alt="" class="w-fit" />
     <router-link class="block" v-bind:to="productURL"
       ><Button class="w-full bg-Theme-blue"
     /></router-link>
 
     <div class="flex items-center">
-      <p class="text-Body3 flex-1 text-OpacityWhite-1">{{ productName }}</p>
-      <p class="text-Sub3 text-OpacityWhite-2">
+      <p class="Wide:text-Body3 text-Sub3 flex-1 text-OpacityWhite-1">
+        {{ productName }}
+      </p>
+      <p class="Wide:text-Sub3 text-[12px] text-OpacityWhite-2">
         {{ productPrice === 0 ? "限时免费" : `${productPrice}元` }}
       </p>
     </div>
