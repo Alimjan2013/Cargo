@@ -48,7 +48,7 @@ export default {
   <div class="flex flex-col flex-1 overflow-y-auto">
     <MenuBar v-bind:menuItem="menuItem" />
     <div class="routerView overflow-auto">
-      <router-view :key="key"></router-view>
+      <router-view :key="this.$route.params.name"></router-view>
     </div>
   </div>
 </template>
