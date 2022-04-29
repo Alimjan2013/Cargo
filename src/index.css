@@ -819,6 +819,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 8px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-Display3 {
   font-size: 36px;
 }
@@ -841,6 +845,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-\[12px\] {
   font-size: 12px;
+}
+
+.text-Display1 {
+  font-size: 56px;
 }
 
 .text-OpacityWhite-1 {

@@ -4,6 +4,13 @@
       {{ barName }}
     </div>
     <div
+      class="text-center text-Display3 text-OpacityWhite-3"
+      v-if="productList.length === 0"
+    >
+      敬请期待商品上线
+    </div>
+    <div
+      v-else
       class="grid ExtraWide:gap-5 gap-3 ExtraWide:grid-cols-4 Standard:grid-cols-3 grid-cols-2"
     >
       <ProductCard
