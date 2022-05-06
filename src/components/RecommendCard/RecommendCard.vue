@@ -2,18 +2,20 @@
   <div class="bg-Background-3 flex-1 text-OpacityWhite-2 p-3 space-y-2">
     <div class="Wide:text-Body3 text-Sub2">{{ cardName }}</div>
     <div v-if="productList.length === 0">加载中</div>
-    <div v-else class="flex">
+    <div v-else class="grid grid-cols-4 gap-2">
       <div
         v-for="item in productList"
         :key="item"
-        class="flex flex-1 flex-col items-center space-y-1"
+        class="flex flex-col items-center"
       >
+        <!-- todo ：fix flex-1 宽度不固定导致名称不出现 ...
+       -->
         <img
           class="ExtraWide:w-8 ExtraWide:h-8 Wide:w-7 Wide:h-7 w-6 h-6 rounded-2xl"
           :src="item.cover"
           alt=""
         />
-        <p class="ExtraWide:text-Sub1 text-Sub3 truncate">
+        <p class="ExtraWide:text-Sub1 text-Sub3 truncate w-full text-center">
           {{ item.name }}
         </p>
         <button
