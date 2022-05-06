@@ -18,11 +18,16 @@
         <p class="ExtraWide:text-Sub1 text-Sub3 truncate w-full text-center">
           {{ item.name }}
         </p>
-        <button
-          class="ExtraWide:px-3 ExtraWide:py-1 px-1 py-0 bg-OpacityWhite-1 text-Background-2"
+        <router-link
+          class="block"
+          v-bind:to="`/product/${item._id}/${item.catalogue.second}`"
         >
-          预览
-        </button>
+          <button
+            class="ExtraWide:px-3 ExtraWide:py-1 px-1 py-0 bg-OpacityWhite-1 text-Background-2"
+          >
+            预览
+          </button>
+        </router-link>
       </div>
     </div>
   </div>
