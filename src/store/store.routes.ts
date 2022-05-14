@@ -7,7 +7,7 @@ import ProductLibrary from "../components/ProductLibrary/ProductLibrary.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/store",
+    path: "/",
     component: Store,
     children: [
       {
