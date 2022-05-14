@@ -7,7 +7,6 @@
         class="bg-cover bg-center"
         :style="`background-image: url(${item.url})`"
       >
-        <div class="text-OpacityWhite-1">hhh</div>
         <!-- <img
           class="w-fit"
           src="http://io.iooslo.tech/CarStore/%E6%88%AA%E5%B1%8F2022-04-12%2010.18.21.png"
@@ -60,16 +59,17 @@ export default {
     return {
       items: [
         {
-          url: "http://io.iooslo.tech/CarStore/%E6%88%AA%E5%B1%8F2022-04-12%2010.18.21.png",
+          url: "http://io.iooslo.tech/CarStore/%E6%88%AA%E5%B1%8F2022-04-11%2017.10.13.webp",
         },
         {
-          url: "http://io.iooslo.tech/CarStore/%E6%88%AA%E5%B1%8F2022-03-21%2022.07.05.png",
+          url: "http://io.iooslo.tech/CarStore/%E6%88%AA%E5%B1%8F2022-04-11%2016.45.14.webp",
         },
         {
-          url: "http://io.iooslo.tech/CarStore/%E6%88%AA%E5%B1%8F2022-04-12%2010.18.21.png",
+          url: "http://io.iooslo.tech/CarStore/%E6%88%AA%E5%B1%8F2022-04-11%2017.09.58.webp",
         },
+
         {
-          url: "http://io.iooslo.tech/CarStore/%E6%88%AA%E5%B1%8F2022-03-21%2022.07.05.png",
+          url: "http://io.iooslo.tech/CarStore/%E6%88%AA%E5%B1%8F2022-04-11%2017.10.39.webp",
         },
       ],
     };

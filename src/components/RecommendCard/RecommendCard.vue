@@ -11,11 +11,16 @@
       >
         <!-- todo ：fix flex-1 宽度不固定导致名称不出现 ...
        -->
-        <img
-          class="Wide:w-7 Wide:h-7 w-6 h-6 rounded-2xl"
-          :src="item.cover"
-          alt=""
-        />
+
+        <picture class="Wide:w-7 Wide:h-7 w-6 h-6 rounded-2xl">
+          <source type="image/webp" v-bind:srcset="item.cover" />
+          <img
+            class="Wide:w-7 Wide:h-7 w-6 h-6 rounded-2xl"
+            v-bind:src="item.cover + '?imageMogr2/format/png/ignore-error/1'"
+            v-bind:srcset="item.cover + '?imageMogr2/format/png/ignore-error/1'"
+            alt="图片"
+          />
+        </picture>
         <p class="ExtraWide:text-Sub1 text-Sub3 truncate w-full text-center">
           {{ item.name }}
         </p>

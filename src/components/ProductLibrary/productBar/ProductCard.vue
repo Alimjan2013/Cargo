@@ -1,6 +1,16 @@
 <template>
   <div class="Wide:space-y-3 space-y-1">
-    <img v-bind:src="productCover" alt="" class="w-fit" />
+    <!-- <img v-bind:src="productCover" alt="" class="w-fit aspect-video" /> -->
+
+    <picture class="w-fit aspect-video">
+      <source type="image/webp" v-bind:srcset="productCover" />
+      <img
+        class="w-fit aspect-video"
+        v-bind:src="productCover + '?imageMogr2/format/png/ignore-error/1'"
+        v-bind:srcset="productCover + '?imageMogr2/format/png/ignore-error/1'"
+        alt="图片"
+      />
+    </picture>
     <router-link class="block" v-bind:to="productURL"
       ><Button class="w-full bg-Theme-blue"
     /></router-link>
