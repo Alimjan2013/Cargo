@@ -12,7 +12,7 @@
 
     <router-link
       class="Wide:text-Sub1 text-Sub3 px-2 py-1 text-OpacityWhite-3"
-      to="/store/aboutme"
+      to="/aboutme"
     >
       <svg
         width="2em"

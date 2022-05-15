@@ -34,33 +34,14 @@
             'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
           ]"
         >
-          <ul class="space-y-1">
+          <ul class="space-y-1 overflow-auto overflow-y-auto h-full">
+            <p v-if="posts.length === 0">暂无内容</p>
             <li
               v-for="post in posts"
-              :key="post.id"
-              class="relative bg-Background-4 rounded-md p-3 hover:bg-gray-100"
+              :key="post._id"
+              class="relative bg-Background-4 rounded-md p-3 hover:bg-gray-100 space-y-1"
             >
-              <h3 class="text-sm font-medium leading-5">
-                {{ post.title }}
-              </h3>
-
-              <ul
-                class="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500"
-              >
-                <li>{{ post.date }}</li>
-                <li>&middot;</li>
-                <li>{{ post.commentCount }} comments</li>
-                <li>&middot;</li>
-                <li>{{ post.shareCount }} shares</li>
-              </ul>
-
-              <a
-                href="#"
-                :class="[
-                  'absolute inset-0 rounded-md',
-                  'ring-blue-400 focus:z-10 focus:outline-none focus:ring-2',
-                ]"
-              />
+              <OrderCard :id="post._id" :catalogue="post.catalogue.second" />
             </li>
           </ul>
         </TabPanel>
@@ -72,70 +53,53 @@
 <script setup>
 import { ref } from "vue";
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue";
+import OrderCard from "./OrderCard.vue";
 const categoriesName = ["全部商品", "待支付", "待下发", "已完成"];
 const categories = ref({
-  全部商品: [
+  1: [
     {
-      id: 1,
-      title: "Does drinking coffee make you smarter?",
-      date: "5h ago",
-      commentCount: 5,
-      shareCount: 2,
+      _id: "6262ad7c8cc5730001514312",
+      catalogue: { first: "智能场景", second: "实用系列" },
     },
     {
-      id: 2,
-      title: "So you've bought coffee... now what?",
-      date: "2h ago",
-      commentCount: 3,
-      shareCount: 2,
-    },
-  ],
-  待支付: [
-    {
-      id: 1,
-      title: "Is tech making coffee better or worse?",
-      date: "Jan 7",
-      commentCount: 29,
-      shareCount: 16,
+      _id: "6262adcc5e2c5700018cc6e2",
+      catalogue: { first: "智能场景", second: "实用系列" },
     },
     {
-      id: 2,
-      title: "The most innovative things happening in coffee",
-      date: "Mar 19",
-      commentCount: 24,
-      shareCount: 12,
+      _id: "626a3d7777a7c6000104e0d2",
+      catalogue: { first: "智能场景", second: "实用系列" },
+    },
+    {
+      _id: "626a3db9eb12470001b00198",
+      catalogue: { first: "智能场景", second: "实用系列" },
+    },
+    {
+      _id: "6262aeff8d55d00001328553",
+      catalogue: { first: "智能场景", second: "酷炫系列" },
     },
   ],
-  待下发: [
+  2: [],
+  3: [],
+  4: [
     {
-      id: 1,
-      title: "Ask Me Anything: 10 answers to your questions about coffee",
-      date: "2d ago",
-      commentCount: 9,
-      shareCount: 5,
+      _id: "6262ad7c8cc5730001514312",
+      catalogue: { first: "智能场景", second: "实用系列" },
     },
     {
-      id: 2,
-      title: "The worst advice we've ever heard about coffee",
-      date: "4d ago",
-      commentCount: 1,
-      shareCount: 2,
-    },
-  ],
-  已完成: [
-    {
-      id: 1,
-      title: "Ask Me Anything: 10 answers to your questions about coffee",
-      date: "2d ago",
-      commentCount: 9,
-      shareCount: 5,
+      _id: "6262adcc5e2c5700018cc6e2",
+      catalogue: { first: "智能场景", second: "实用系列" },
     },
     {
-      id: 2,
-      title: "The worst advice we've ever heard about coffee",
-      date: "4d ago",
-      commentCount: 1,
-      shareCount: 2,
+      _id: "626a3d7777a7c6000104e0d2",
+      catalogue: { first: "智能场景", second: "实用系列" },
+    },
+    {
+      _id: "626a3db9eb12470001b00198",
+      catalogue: { first: "智能场景", second: "实用系列" },
+    },
+    {
+      _id: "6262aeff8d55d00001328553",
+      catalogue: { first: "智能场景", second: "酷炫系列" },
     },
   ],
 });

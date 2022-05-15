@@ -59,17 +59,17 @@ export default {
     return {
       items: [
         {
-          url: "http://io.iooslo.tech/CarStore/%E6%88%AA%E5%B1%8F2022-04-11%2017.10.13.webp",
+          url: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d40d2143-72af-4a3b-b428-2874934cbc4f/d0385c3a-3486-4d33-8749-a2d76d043fe5.webp",
         },
         {
-          url: "http://io.iooslo.tech/CarStore/%E6%88%AA%E5%B1%8F2022-04-11%2016.45.14.webp",
+          url: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d40d2143-72af-4a3b-b428-2874934cbc4f/7d4d6540-df89-4e67-8cee-616fb9c1cf68.webp",
         },
         {
-          url: "http://io.iooslo.tech/CarStore/%E6%88%AA%E5%B1%8F2022-04-11%2017.09.58.webp",
+          url: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d40d2143-72af-4a3b-b428-2874934cbc4f/510015b7-a79a-4496-8873-56ffc5100614.webp",
         },
 
         {
-          url: "http://io.iooslo.tech/CarStore/%E6%88%AA%E5%B1%8F2022-04-11%2017.10.39.webp",
+          url: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d40d2143-72af-4a3b-b428-2874934cbc4f/c717c2bb-0192-4209-895d-8d319204feba.webp",
         },
       ],
     };
