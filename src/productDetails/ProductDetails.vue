@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-1 flex-col">
-    <NavigationBar :title="product.name" />
+    <NavigationBar :title="name" />
     <div
       class="flex-1 grid grid-cols-1 gap-1 Wide:grid-cols-10 py-4 Wide:px-8 px-4 Standard:px-6 space-x-2 bg-Background-2"
     >
@@ -8,7 +8,7 @@
         <div class="flex space-x-4 overflow-x-auto snap-x w-full">
           <div
             class="flex-none snap-center"
-            v-for="img in product.detailsImages"
+            v-for="img in detailsImages"
             :key="img"
           >
             <img
@@ -27,18 +27,21 @@
         </div>
         <div class="flex">
           <div class="text-OpacityWhite-1 flex-1">
-            {{ product.introduction }}
+            {{ introduction }}
           </div>
           <div class="text-OpacityWhite-1">
-            {{ product.price === 0 ? "限时免费" : `${product.price}元` }}
+            {{ price === 0 ? "限时免费" : `${price}元` }}
           </div>
         </div>
       </div>
       <div class="text-OpacityWhite-1 Wide:col-span-2 space-y-2">
-        <div>相关推荐</div>
+        <div class="text-OpacityWhite-2 text-Sub3 Wide:text-Body3">
+          相关推荐
+        </div>
         <div
           class="grid grid-cols-2 gap-1 Wide:grid-cols-1 Wide:space-y-2 space-x-2 Wide:space-x-0"
         >
+          <p v-if="productRecommendList.length === 0">推荐商品加载失败</p>
           <ProductCardMini
             class="Wide:last:block last:hidden"
             v-for="product in productRecommendList"
@@ -59,7 +62,10 @@ import ProductCardMini from "./ProductCardMini.vue";
 export default {
   data() {
     return {
-      product: {},
+      detailsImages: [],
+      name: "商品载入中...",
+      introduction: "",
+      price: 0,
       type: {
         img: "img",
         video: "video",
@@ -75,28 +81,61 @@ export default {
       const productList = this.$store.state.productList.filter(
         (item) => item.catalogue === catalogue
       );
-      this.product = productList[0].product.filter(
-        (item) => item._id === this.productID
-      )[0];
-      console.log(this.product);
+
+      if (productList.length !== 0) {
+        let product = productList[0].product.filter(
+          (item) => item._id === this.productID
+        )[0];
+        this.detailsImages = product.detailsImages;
+        this.name = product.name;
+        this.introduction = product.introduction;
+        this.price = product.price;
+      } else {
+        this.findProductByID(this.productID);
+      }
+    },
+    findProductByID(ID) {
+      fetch(
+        "https://d40d2143-72af-4a3b-b428-2874934cbc4f.bspapp.com/findItemByID",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ID: ID }),
+        }
+      )
+        .then((res) => res.json())
+        .then((json) => {
+          if (json._id === "noData") {
+            console.log("数据库没有返回相应数据");
+          } else {
+            this.detailsImages = json.detailsImages;
+            this.name = json.name;
+            this.introduction = json.introduction;
+            this.price = json.price;
+          }
+        });
     },
     getRecommendProductList(productID, catalogue) {
       const productList = this.$store.state.productList.filter(
         (item) => item.catalogue === catalogue
       );
-      let productRecommendList = [];
-      productList[0].product.map((product, index) => {
-        if (index === 4) {
-          return;
-        }
-        if (product._id !== productID) {
-          productRecommendList.push(product);
-        }
-      });
-      this.productRecommendList = productRecommendList;
+      if (productList.length !== 0) {
+        let productRecommendList = [];
+        productList[0].product.map((product, index) => {
+          if (index === 4) {
+            return;
+          }
+          if (product._id !== productID) {
+            productRecommendList.push(product);
+          }
+        });
+        this.productRecommendList = productRecommendList;
 
-      console.log("找到的商品列表");
-      console.log(productRecommendList);
+        console.log("找到的商品列表");
+        console.log(productRecommendList);
+      } else {
+        // todo 需要从云端获取推荐列表
+      }
     },
   },
   created() {
