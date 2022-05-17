@@ -7,7 +7,7 @@
         alt=""
       />
       <div class="text-center">
-        <p class="text-Body3">高峰</p>
+        <p class="text-Sub1">高峰</p>
         <p class="text-Sub3 text-OpacityWhite-2">3160100008</p>
       </div>
     </div>
@@ -18,7 +18,9 @@
         class="hidden Wide:flex"
       />
       <div class="flex flex-col items-center">
-        <div class="text-center text-Sub3 p-0 border-[1px] border-Line-1">
+        <div
+          class="text-center text-Sub3 p-0 Wide:border-[1px] Wide:border-Line-1"
+        >
           R7 ｜ 智享车主
         </div>
       </div>

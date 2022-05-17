@@ -1,9 +1,9 @@
 <template>
   <div class="Wide:flex justify-between text-OpacityWhite-2">
-    <p>订单编号：{{ id }}</p>
+    <p class="hidden Wide:flex">订单编号：{{ id }}</p>
     <p>下单时间：{{ creatDate }}</p>
   </div>
-  <div class="grid gap-4 grid-cols-8">
+  <div class="grid Wide:gap-4 gap-2 grid-cols-8">
     <img class="w-fit Wide:col-span-2 col-span-3" :src="cover" alt="" />
     <div
       class="Wide:col-span-5 col-span-3 mt-1 flex flex-col content-around text-xs font-normal leading-4 text-gray-500"

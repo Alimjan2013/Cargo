@@ -2,9 +2,9 @@
   <div class="w-full h-full sm:px-0">
     <TabGroup>
       <div class="h-full flex flex-col">
-        <div class="bg-Background-3 p-3 row-span-2 col-span-2">
-          <div class="text-Sub2 mb-3">订单中心</div>
-          <TabList class="flex space-x-2 bg-Background-1 p-2">
+        <div class="bg-Background-3 Wide:p-3 p-2 row-span-2 col-span-2">
+          <div class="Wide:text-Sub2 text-Sub3 mb-3">订单中心</div>
+          <TabList class="flex space-x-2 bg-Background-1 Wide:p-2 p-1">
             <Tab
               v-for="category in categoriesName"
               as="template"
@@ -13,7 +13,7 @@
             >
               <button
                 :class="[
-                  'w-full  py-1 text-Sub3 font-medium leading-5 ',
+                  'w-full  py-1 text-Sub3  leading-5 ',
                   '',
                   selected
                     ? 'shadow bg-Background-3 text-OpacityWhite-1'
@@ -31,16 +31,16 @@
             v-for="(posts, idx) in Object.values(categories)"
             :key="idx"
             :class="[
-              'rounded-xl  p-3 overflow-auto  h-full',
+              'rounded-xl  Wide:p-3 p-2 overflow-auto  h-full',
               'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
             ]"
           >
-            <ul class="space-y-1">
+            <ul class="Wide:space-y-1 space-y-3">
               <p v-if="posts.length === 0">暂无内容</p>
               <li
                 v-for="post in posts"
                 :key="post._id"
-                class="relative bg-Background-4 rounded-md p-3 hover:bg-gray-100 space-y-1"
+                class="relative bg-Background-4 rounded-md Wide:p-3 p-2 Wide:space-y-1 space-y-2"
               >
                 <OrderCard :id="post._id" :catalogue="post.catalogue.second" />
               </li>

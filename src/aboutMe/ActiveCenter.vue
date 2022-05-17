@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-Background-3 p-3 space-y-1">
-    <div class="text-Sub2">领券中心</div>
+  <div class="bg-Background-3 Wide:p-3 p-2 space-y-1">
+    <div class="Wide:text-Sub2 text-Sub3">领券中心</div>
     <div class="grid gap-1 grid-cols-6 Wide:grid-cols-3 gap-y-1">
       <div
         v-for="item in activeList"
@@ -8,7 +8,7 @@
         class="flex flex-col items-center"
       >
         <img :src="item.img" class="w-6 h-6" alt="" />
-        <p>{{ item.name }}</p>
+        <p class="hidden Wide:flex">{{ item.name }}</p>
       </div>
     </div>
   </div>
