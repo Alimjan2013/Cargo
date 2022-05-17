@@ -8,7 +8,7 @@
     <div
       class="Wide:col-span-5 col-span-3 mt-1 flex flex-col content-around text-xs font-normal leading-4 text-gray-500"
     >
-      <p class="Wide:text-Sub1 text-Sub2 font-medium pb-3">
+      <p class="Wide:text-Sub1 text-Sub3 font-medium pb-3">
         {{ name }}
       </p>
       <p class="text-OpacityWhite-2 flex-1">
