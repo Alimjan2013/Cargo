@@ -8,7 +8,7 @@
     <div
       class="col-span-5 mt-1 flex flex-col content-around text-xs font-normal leading-4 text-gray-500"
     >
-      <p class="text-Body3 font-medium pb-3">
+      <p class="text-Sub1 font-medium pb-3">
         {{ name }}
       </p>
       <p class="text-OpacityWhite-2 flex-1">

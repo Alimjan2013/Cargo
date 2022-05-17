@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full h-full px-2 py-16 sm:px-0">
+  <div class="w-full h-full px-2 sm:px-0">
     <TabGroup>
       <div class="h-full flex flex-col">
         <div class="bg-Background-3 p-3 row-span-2 col-span-2">
-          <div class="text-Body3 mb-3">订单中心</div>
+          <div class="text-Sub2 mb-3">订单中心</div>
           <TabList class="flex space-x-2 bg-Background-1 p-2">
             <Tab
               v-for="category in categoriesName"
