@@ -1,14 +1,14 @@
 <template>
-  <div class="flex justify-between text-OpacityWhite-2">
+  <div class="Wide:flex justify-between text-OpacityWhite-2">
     <p>订单编号：{{ id }}</p>
     <p>下单时间：{{ creatDate }}</p>
   </div>
   <div class="grid gap-4 grid-cols-8">
-    <img class="w-fit col-span-2" :src="cover" alt="" />
+    <img class="w-fit Wide:col-span-2 col-span-3" :src="cover" alt="" />
     <div
-      class="col-span-5 mt-1 flex flex-col content-around text-xs font-normal leading-4 text-gray-500"
+      class="Wide:col-span-5 col-span-3 mt-1 flex flex-col content-around text-xs font-normal leading-4 text-gray-500"
     >
-      <p class="text-Sub1 font-medium pb-3">
+      <p class="Wide:text-Sub1 text-Sub2 font-medium pb-3">
         {{ name }}
       </p>
       <p class="text-OpacityWhite-2 flex-1">
@@ -16,7 +16,7 @@
       </p>
       <p class="">¥ {{ price }}</p>
     </div>
-    <p class="col-span-1 text-right">已完成</p>
+    <p class="Wide:col-span-1 col-span-2 text-right">已完成</p>
   </div>
 </template>
 

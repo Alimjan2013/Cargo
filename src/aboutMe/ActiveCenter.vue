@@ -1,7 +1,7 @@
 <template>
   <div class="bg-Background-3 p-3 space-y-1">
     <div class="text-Sub2">领券中心</div>
-    <div class="grid gap-1 grid-cols-3 gap-y-1">
+    <div class="grid gap-1 grid-cols-6 Wide:grid-cols-3 gap-y-1">
       <div
         v-for="item in activeList"
         :key="item.name"
