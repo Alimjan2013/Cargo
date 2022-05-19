@@ -13,7 +13,9 @@ export default {
 </script>
 
 <template>
-  <div class="h-screen flex flex-col bg-Background-0">
+  <div
+    class="h-screen flex flex-col bg-Background-0 max-w-screen-SuperWide w-full"
+  >
     <router-view :key="this.$route.params.productID" />
     <AppBar />
   </div>

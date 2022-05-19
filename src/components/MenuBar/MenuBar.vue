@@ -1,6 +1,6 @@
 <template>
   <div class="flex px-3 Wide:px-[80px] items-center bg-Background-1">
-    <div class="flex flex-1 py-2 Wide:space-x-6 space-x-2">
+    <div class="flex flex-1 py-2 SuperWide:py-4 Wide:space-x-6 space-x-2">
       <MenuItem
         v-for="name of MenuItemList"
         :key="name._id"

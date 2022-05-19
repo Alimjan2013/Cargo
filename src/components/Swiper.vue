@@ -1,5 +1,6 @@
 <template>
-  <div class="block h-full">
+  <div>
+    <!-- 手机的幻灯片 -->
     <el-carousel height="300px" class="Wide:hidden">
       <el-carousel-item
         v-for="item in items"
@@ -14,11 +15,31 @@
         /> -->
       </el-carousel-item>
     </el-carousel>
+    <!--  普通中的幻灯片 -->
     <el-carousel
       type="card"
       height="300px"
       indicator-position="none"
-      class="Wide:block hidden"
+      class="Wide:block hidden SuperWide:hidden"
+    >
+      <el-carousel-item
+        v-for="item in items"
+        :key="item"
+        class="bg-cover bg-center"
+        :style="`background-image: url(${item.url})`"
+      >
+        <!-- <img
+          class="h-[250]"
+          src="http://io.iooslo.tech/CarStore/%E6%88%AA%E5%B1%8F2022-04-12%2010.18.21.png"
+          alt=""
+        /> -->
+      </el-carousel-item>
+    </el-carousel>
+    <!--  超大屏幕下的幻灯片 -->
+    <el-carousel
+      height="800px"
+      indicator-position="none"
+      class="SuperWide:block hidden"
     >
       <el-carousel-item
         v-for="item in items"

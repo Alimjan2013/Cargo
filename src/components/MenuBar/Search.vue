@@ -1,8 +1,8 @@
 <template>
-  <div class="Wide:flex bg-Background-3 py-0 pl-1 hidden">
+  <div class="Wide:flex bg-Background-3 SuperWide:py-2 py-0 pl-1 hidden">
     <input
       type="text"
-      class="placeholder:px-0 focus:border-Line-2 focus:ring-1 focus:outline-none p-0 focus:ring-Line-2"
+      class="placeholder:px-0 focus:border-Line-2 focus:ring-1 focus:outline-none p-0 SuperWide:py-1 SuperWide:px-2 focus:ring-Line-2"
       placeholder="请输入搜索内容"
       @click="handleClick()"
     />
@@ -41,21 +41,55 @@
   </div>
   <Dialog :open="isOpen" @close="setIsOpen" class="relative z-50">
     <div
-      class="fixed inset-0 Wide:flex hidden flex-col justify-start items-center p-4 pt-6 bg-OpacityBlack-3 space-y-2"
+      class="fixed inset-0 Wide:flex hidden flex-col justify-start items-center p-4 pt-6 SuperWide:pt-8 bg-OpacityBlack-3"
     >
       <DialogPanel
-        class="w-full max-w-2xl rounded space-y-2 bg-Background-2 p-3 text-OpacityWhite-1"
+        class="w-full max-w-2xl SuperWide:max-w-6xl rounded space-y-2 SuperWide:space-y-3 bg-Background-2 p-3 SuperWide:p-5 text-OpacityWhite-1"
       >
         <div
-          class="w-full max-w-2xl Wide:flex bg-Background-3 py-0 pl-1 hidden"
+          class="w-full flex bg-Background-3 py-0 SuperWide:p-4 SuperWide:space-x-3 pl-1"
         >
           <input
             type="text"
-            class="placeholder:px-0 focus:border-Line-2 w-full focus:ring-1 focus:outline-none p-1 h-6 focus:ring-Line-2"
+            class="placeholder:px-0 SuperWide:p-3 focus:border-Line-2 w-full focus:ring-1 focus:outline-none p-1 focus:ring-Line-2 SuperWide:text-Body2 text-Background-3"
             placeholder="请输入搜索内容"
             @click="handleClick()"
           />
-          <div class="px-1 py-0 my-auto">
+          <!-- 大尺寸下的搜索icon -->
+          <div class="px-1 py-0 my-auto hidden SuperWide:flex">
+            <svg
+              width="2em"
+              height="2em"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+              <path
+                d="M21 38C30.3888 38 38 30.3888 38 21C38 11.6112 30.3888 4 21 4C11.6112 4 4 11.6112 4 21C4 30.3888 11.6112 38 21 38Z"
+                fill="none"
+                stroke="#f1f1f1"
+                stroke-width="4"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M26.6568 14.3431C25.2091 12.8954 23.2091 12 21 12C18.7909 12 16.7909 12.8954 15.3431 14.3431"
+                stroke="#f1f1f1"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M33.2218 33.2218L41.7071 41.7071"
+                stroke="#f1f1f1"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <!-- 普通尺寸下的搜索icon -->
+          <div class="px-1 py-0 my-auto SuperWide:hidden">
             <svg
               width="24"
               height="24"
@@ -90,7 +124,7 @@
         </div>
         <RecommendCardForSearch
           :productList="RecommendProduct"
-          class="w-full max-w-2xl"
+          class="w-full"
           cardName="热门推荐"
         />
       </DialogPanel>

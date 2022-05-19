@@ -1,10 +1,10 @@
 <template>
-  <div class="space-y-3">
-    <div class="flex-1 bg-Background-1 p-3">
+  <div class="space-y-3 SuperWide:space-y-6">
+    <div class="bg-Background-1 p-3 SuperWide:p-5 col-span-4">
       <Swiper />
     </div>
     <div
-      class="flex-1 bg-Background-1 p-3 Wide:flex Wide:space-x-3 Wide:space-y-[0] space-y-2"
+      class="bg-Background-1 SuperWide:p-5 p-3 Wide:flex Wide:space-x-3 SuperWide:space-x-5 Wide:space-y-[0] space-y-2"
     >
       <RecommendCard :productList="RecommendProduct" cardName="热门推荐" />
       <RecommendCard :productList="NewstProduct" cardName="最近使用" />

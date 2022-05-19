@@ -3,7 +3,7 @@
     class="grid gap-2 grid-cols-8 text-OpacityWhite-1 h-full space-y-2 Wide:space-x-0"
   >
     <div
-      class="Wide:col-span-2 col-span-8 flex flex-col Wide:space-y-5 space-y-2"
+      class="Wide:col-span-2 col-span-8 flex flex-col Wide:space-y-3 space-y-2"
     >
       <UserInfo />
       <ActiveCenter />
