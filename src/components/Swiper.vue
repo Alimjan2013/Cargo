@@ -37,7 +37,7 @@
     </el-carousel>
     <!--  超大屏幕下的幻灯片 -->
     <el-carousel
-      height="800px"
+      height="750px"
       indicator-position="none"
       class="SuperWide:block hidden"
     >
